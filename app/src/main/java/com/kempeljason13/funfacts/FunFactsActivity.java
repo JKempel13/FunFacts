@@ -4,14 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
 public class FunFactsActivity extends AppCompatActivity {
+    public static final String TAG = FunFactsActivity.class.getSimpleName();
     private FactBook factBook = new FactBook();
     private ColorWheel colorWheel = new ColorWheel();
     // declare our view variables
@@ -43,6 +46,7 @@ public class FunFactsActivity extends AppCompatActivity {
         };
         showFactButton.setOnClickListener(listener);
 
-
+        //Toast.makeText(this, "Good job, your Activity was created!", Toast.LENGTH_SHORT).show();
+        Log.d(TAG,"We're logging from the onCreate() method!");
     }
 }
